@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Appointment - Dento{% endblock %}
+{% block meta_description %}Appointment{% endblock %}
+
+{% block content %}
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+<center>
+  <h1>Review of Your Information</h1>
+  <strong>Your name: </strong>{{your_name}}<br/>
+  <strong>Phone: </strong>{{your_phone}}<br/>
+  <strong>Email: </strong>{{your_email}}<br/>
+  <strong>Address: </strong>{{your_address}}<br/>
+  <strong>Your schedule: </strong>{{your_schedule}}<br/>
+  <strong>Your time: </strong>{{your_time}}<br/>
+  <strong>Message: </strong>{{your_message}}<br/>
+  <br/><br/><br/><br/>
+  <strong>Note: </strong>Your appointment has not been booked yet. We will contact you shortly <strong>{{your_name}} </strong>to confirm your appointment.
+</center>
+<br/><br/>
+
+ 
+{% endblock %}
